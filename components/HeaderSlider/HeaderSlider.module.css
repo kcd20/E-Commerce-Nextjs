@@ -1,0 +1,157 @@
+.sliderContainer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.sliderWrapper {
+  display: flex;
+  transition: transform 700ms ease-in-out;
+}
+
+.slideItem {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e6e9f2;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
+  min-width: 100%;
+}
+
+.slideContent {
+  margin-top: 2.5rem;
+  margin-bottom: 0;
+}
+
+.offerText {
+  color: #ea580c;
+  padding-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.slideTitle {
+  max-width: 32rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.buyButton {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #ea580c;
+  border-radius: 9999px;
+  color: white;
+  font-size: 100%;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.findMoreButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  font-weight: 500;
+  font-size: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.findMoreButton img {
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.findMoreButton:hover img {
+  transform: translateX(0.25rem);
+}
+
+.slideImageWrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  width: 12rem;
+}
+
+.slideImage {
+  width: 12rem;
+  height: auto;
+}
+
+.dotNavigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+.dotActive {
+  background-color: #ea580c;
+}
+
+/* --- Media Queries for Medium Devices (md) --- */
+@media (min-width: 768px) {
+  .slideItem {
+    flex-direction: row;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
+  .slideContent {
+    padding-left: 2rem;
+    margin-top: 0;
+  }
+
+  .offerText {
+    font-size: 1rem;
+  }
+
+  .slideTitle {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .buttonContainer {
+    margin-top: 1.5rem;
+  }
+
+  .buyButton {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+
+  .slideImage {
+    width: 18rem;
+  }
+}

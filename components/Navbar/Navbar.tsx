@@ -1,0 +1,45 @@
+'use client'
+import React from 'react'
+import { assets } from '@/assets/assets'
+import Link from 'next/link'
+import Image from 'next/image'
+import Router from 'next/router'
+import styles from './Navbar.module.css'
+
+const Navbar = () => {
+  return (
+    <nav className={styles.navbar}>
+      <Image
+        className={styles.logo}
+        onClick={() => Router.push('/')}
+        src={assets.logo}
+        alt="logo"
+      />
+      <div className={styles.navLinks}>
+        <Link href="/" className={styles.link}>Home</Link>
+        <Link href="/all-products" className={styles.link}>Shop</Link>
+        <Link href="/" className={styles.link}>About Us</Link>
+        <Link href="/" className={styles.link}>Contact</Link>
+      </div>
+
+      <ul className={styles.icons}>
+        <li><Image className={styles.icon} src={assets.search_icon} alt="search icon" /></li>
+        <li>
+          <button className={styles.accountBtn}>
+            <Image src={assets.user_icon} alt="user icon" />
+            Account
+          </button>
+        </li>
+      </ul>
+
+      <div className={styles.mobileAccount}>
+        <button className={styles.accountBtn}>
+          <Image src={assets.user_icon} alt="user icon" />
+          Account
+        </button>
+      </div>
+    </nav>
+  )
+}
+
+export default Navbar

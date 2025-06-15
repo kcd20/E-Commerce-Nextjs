@@ -1,0 +1,102 @@
+.bannerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  background-color: #e6e9f2;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.jblSoundboxImage {
+  max-width: 14rem;
+  height: auto;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  max-width: 18.125rem;
+}
+
+.description {
+  max-width: 21.4375rem;
+  font-weight: 500;
+  color: rgba(31, 41, 55, 0.6);
+}
+
+.buyButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  background-color: rgb(234, 88, 12);
+  border-radius: 0.25rem;
+  color: white;
+}
+
+.arrowIcon {
+  transition-property: transform;
+  transition-duration: 150ms;
+}
+
+.buyButton:hover .arrowIcon {
+  transform: translateX(0.25rem);
+}
+
+.mdControllerImage {
+  display: none;
+  max-width: 20rem;
+  height: auto;
+}
+
+.smControllerImage {
+  display: block;
+  max-width: 20rem;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .bannerContainer {
+    flex-direction: row;
+    padding-left: 5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .contentContainer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .title {
+    font-size: 1.875rem;
+  }
+
+  .mdControllerImage {
+    display: block;
+  }
+
+  .smControllerImage {
+    display: none;
+  }
+}

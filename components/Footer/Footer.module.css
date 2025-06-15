@@ -1,0 +1,94 @@
+/* Default styles for all screen sizes */
+.footerTop {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 3.5rem 1.5rem;
+  border-bottom: 1px solid rgba(107, 114, 128, 0.3);
+  color: #6b7280;
+}
+
+.logoSection {
+  width: 80%;
+}
+
+.logo {
+  width: 7rem;
+  height: auto;
+}
+
+.description {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.linkSection,
+.contactSection {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sectionTitle {
+  font-weight: 500;
+  color: #111827;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  display: block;
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: text-decoration 0.3s ease;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.contactInfo p {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.contactInfo p:last-child {
+  margin-bottom: 0;
+}
+
+.copyright {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.75rem;
+}
+
+/* Media query for screens larger than 768px */
+@media (min-width: 768px) {
+  .footerTop {
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .linkSection,
+  .contactSection {
+    justify-content: center;
+  }
+}
+
+/* Media query for screens larger than 1024px */
+@media (min-width: 1024px) {
+  .footerTop {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
