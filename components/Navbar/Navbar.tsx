@@ -3,15 +3,17 @@ import React from 'react'
 import { assets } from '@/assets/assets'
 import Link from 'next/link'
 import Image from 'next/image'
-import Router from 'next/router'
+
 import styles from './Navbar.module.css'
+import { useRouter } from 'next/navigation'
 
 const Navbar = () => {
+  const router = useRouter()
   return (
     <nav className={styles.navbar}>
       <Image
         className={styles.logo}
-        onClick={() => Router.push('/')}
+        onClick={() => router.push('/')}
         src={assets.logo}
         alt="logo"
       />
