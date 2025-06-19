@@ -1,0 +1,68 @@
+.homeProductsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3.5rem; /* pt-14 (14 * 0.25rem = 3.5rem) */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.heading {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 500; /* font-medium */
+  text-align: left;
+  width: 100%;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding-bottom: 3.5rem;
+  width: 100%;
+}
+
+.seeMoreButton {
+  padding-left: 3rem; /* px-12 (12 * 0.25rem = 3rem) */
+  padding-right: 3rem; /* px-12 */
+  padding-top: 0.625rem; /* py-2.5 (2.5 * 0.25rem = 0.625rem) */
+  padding-bottom: 0.625rem; /* py-2.5 */
+  border: 1px solid; /* border */
+  border-color: rgba(
+    107,
+    114,
+    128,
+    0.7
+  ); /* text-gray-500/70 is used for border and text color here */
+  border-radius: 0.25rem; /* rounded */
+  color: rgba(107, 114, 128, 0.7); /* text-gray-500/70 */
+  transition: background-color 150ms ease-in-out; /* transition */
+}
+
+.seeMoreButton:hover {
+  background-color: rgba(248, 250, 252, 0.9); /* hover:bg-slate-50/90 */
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  /* md breakpoint */
+  .productsGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* md:grid-cols-3 */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg breakpoint */
+  .productsGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)); /* lg:grid-cols-4 */
+  }
+}
+
+@media (min-width: 1280px) {
+  /* xl breakpoint */
+  .productsGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* xl:grid-cols-5 */
+  }
+}

@@ -1,0 +1,140 @@
+/* ProductCard.module.css */
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.125rem;
+  max-width: 12.5rem; /* 200px / 16 */
+  width: 100%;
+  cursor: pointer;
+}
+
+.imageContainer {
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(107, 114, 128, 0.1);
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 13rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensures scale doesn't break layout */
+}
+
+.productImage {
+  object-fit: cover;
+  width: 80%;
+  height: 80%;
+  transition: transform 300ms ease-in-out;
+}
+
+.imageContainer:hover .productImage {
+  transform: scale(1.05);
+}
+
+.heartButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.heartIcon {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.productName {
+  font-weight: 500;
+  padding-top: 0.5rem;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productDescription {
+  width: 100%;
+  font-size: 0.75rem;
+  color: rgba(107, 114, 128, 0.7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ratingNumber {
+  font-size: 0.75rem;
+}
+
+.starIcons {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.starIcon {
+  height: 0.75rem;
+  width: 0.75rem;
+}
+
+.priceBuyContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.buyNowButton {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  color: rgb(107, 114, 128);
+  border: 1px solid rgba(107, 114, 128, 0.2);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  transition: background-color 150ms ease-in-out;
+}
+
+.buyNowButton:hover {
+  background-color: rgb(248, 250, 252);
+}
+
+/* Media Queries */
+@media (max-width: 639px) {
+  /* max-sm:hidden */
+  .productDescription {
+    display: none;
+  }
+  .buyNowButton {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  /* md breakpoint */
+  .productName {
+    font-size: 1rem;
+  }
+  .productImage {
+    width: 100%;
+    height: 100%;
+  }
+}
