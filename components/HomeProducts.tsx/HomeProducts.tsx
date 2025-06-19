@@ -6,7 +6,7 @@ import useProductStore from "@/store/useProductStore";
 import { useRouter } from "next/navigation";
 import { productsDummyData } from "@/assets/assets";
 
-const HomeProducts = () => {
+export default function HomeProducts() {
     const router = useRouter()
     const products = useProductStore((state) => state.products)
     const updateProducts = useProductStore((state) => state.updateProducts)
@@ -25,7 +25,7 @@ const HomeProducts = () => {
             </div>
             <button
                 onClick={() => {
-                    router.push("/all-products");
+                    router.push("/shop");
                 }}
                 className={styles.seeMoreButton}
             >
@@ -34,5 +34,3 @@ const HomeProducts = () => {
         </div>
     );
 };
-
-export default HomeProducts;

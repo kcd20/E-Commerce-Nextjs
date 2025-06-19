@@ -19,7 +19,7 @@ const Navbar = () => {
       />
       <div className={styles.navLinks}>
         <Link href="/" className={styles.link}>Home</Link>
-        <Link href="/all-products" className={styles.link}>Shop</Link>
+        <Link href="/shop" className={styles.link}>Shop</Link>
         <Link href="/" className={styles.link}>About Us</Link>
         <Link href="/" className={styles.link}>Contact</Link>
       </div>
