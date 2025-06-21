@@ -1,0 +1,52 @@
+/* Base styles for the container */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Default height for most screens */
+}
+
+/* Base styles for the spinner */
+.spinner {
+  animation: spin 1s linear infinite; /* Animation definition */
+  border-radius: 50%;
+  border: 4px solid var(--gray-200, #e2e8f0); /* Default border color */
+  border-top: 4px solid var(--orange-300, #fdba74); /* Top border color */
+  height: 20px; /* Default size */
+  width: 20px; /* Default size */
+}
+
+/* Keyframes for the spinning animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 640px) {
+  /* Small screens and up */
+  .spinner {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Large screens and up */
+  .spinner {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Extra-large screens and up */
+  .spinner {
+    height: 80px;
+    width: 80px;
+  }
+}

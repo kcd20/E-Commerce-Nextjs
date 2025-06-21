@@ -1,0 +1,211 @@
+/* Cart.module.css */
+
+/* Main container */
+.cartContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem; /* Equivalent to Tailwind's gap-10 (40px) */
+  padding: 3.5rem 1.5rem 5rem; /* Equivalent to pt-14 px-6 mb-20 */
+}
+
+/* Cart Header */
+.cartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem; /* mb-8 */
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3); /* border-gray-500/30 */
+  padding-bottom: 1.5rem; /* pb-6 */
+}
+
+.cartTitle {
+  font-size: 1.5rem; /* text-2xl */
+  color: #808080; /* text-gray-500 */
+}
+
+.cartTitle span {
+  font-weight: 500; /* font-medium */
+  color: #ea580c; /* text-orange-600 */
+}
+
+.itemCount {
+  font-size: 1.125rem; /* text-lg */
+  color: rgba(128, 128, 128, 0.8); /* text-gray-500/80 */
+}
+
+/* Table styles */
+.tableContainer {
+  overflow-x: auto;
+}
+
+.cartTable {
+  min-width: 100%;
+  table-layout: auto;
+  text-align: left;
+}
+
+.tableHeaderTh {
+  white-space: nowrap;
+  padding-bottom: 1.5rem;
+  padding-left: 0.25rem; /* px-1 */
+  padding-right: 0.25rem; /* px-1 */
+  color: #4b5563; /* text-gray-600 */
+  font-weight: 500;
+}
+
+/* Table body row */
+.productRow {
+  border-top: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+/* Product Details Cell */
+.productDetailsCell {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* gap-4 */
+  padding: 1rem 0.25rem; /* py-4 px-1 */
+}
+
+.productImageWrapper {
+  border-radius: 0.5rem; /* rounded-lg */
+  overflow: hidden;
+  background-color: rgba(128, 128, 128, 0.1); /* bg-gray-500/10 */
+  padding: 0.5rem; /* p-2 */
+}
+
+.productImage {
+  width: 4rem; /* w-16 */
+  height: auto;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.productNameAndRemoveMobile {
+  display: block; /* md:hidden */
+}
+
+.productNameAndRemoveDesktop {
+  font-size: 0.875rem; /* text-sm */
+  display: none; /* hidden md:block */
+}
+
+.productName {
+  color: #1f2937; /* text-gray-800 */
+}
+
+.removeButton {
+  font-size: 0.75rem; /* text-xs */
+  color: #ea580c; /* text-orange-600 */
+  margin-top: 0.25rem; /* mt-1 */
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Price, Quantity, Subtotal cells */
+.tableCell {
+  padding: 1rem 0.25rem; /* py-4 px-1 */
+  color: #4b5563; /* text-gray-600 */
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; /* gap-1 */
+}
+
+.quantityButton {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.quantityArrow {
+  width: 1rem; /* w-4 */
+  height: 1rem; /* h-4 */
+}
+
+.quantityInput {
+  width: 2rem; /* w-8 */
+  border: 1px solid #d1d5db; /* border */
+  text-align: center;
+  -moz-appearance: textfield; /* For Firefox */
+  appearance: none; /* For Webkit-based browsers */
+}
+
+/* Hide number input arrows for Chrome, Safari, Edge */
+.quantityInput::-webkit-outer-spin-button,
+.quantityInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Continue Shopping Button */
+.continueShoppingButton {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem; /* mt-6 */
+  gap: 0.5rem; /* gap-2 */
+  color: #ea580c; /* text-orange-600 */
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit; /* Ensure text size is consistent */
+}
+
+.continueShoppingButton:hover .arrowIcon {
+  transform: translateX(-0.25rem); /* group-hover:-translate-x-1 */
+}
+
+.arrowIcon {
+  transition: transform 0.15s ease-in-out; /* transition */
+}
+
+/* --- Media Queries --- */
+
+/* Medium devices (md) and up */
+@media (min-width: 768px) {
+  .cartContainer {
+    flex-direction: row;
+    padding-left: 4rem; /* md:px-16 = 64px = 4rem */
+    padding-right: 4rem; /* md:px-16 = 64px = 4rem */
+  }
+
+  .cartTitle {
+    font-size: 1.875rem; /* md:text-3xl */
+  }
+
+  .itemCount {
+    font-size: 1.25rem; /* md:text-xl */
+  }
+
+  .tableHeaderTh,
+  .productDetailsCell,
+  .tableCell {
+    padding-left: 1rem; /* md:px-4 */
+    padding-right: 1rem; /* md:px-4 */
+  }
+
+  .productNameAndRemoveMobile {
+    display: none;
+  }
+
+  .productNameAndRemoveDesktop {
+    display: block;
+  }
+
+  .quantityControls {
+    gap: 0.5rem; /* md:gap-2 */
+  }
+}
+
+/* Large devices (lg) and up */
+@media (min-width: 1024px) {
+  .cartContainer {
+    padding-left: 8rem; /* lg:px-32 = 128px = 8rem */
+    padding-right: 8rem; /* lg:px-32 = 128px = 8rem */
+  }
+}
