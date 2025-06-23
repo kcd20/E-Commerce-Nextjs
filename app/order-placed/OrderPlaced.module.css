@@ -1,0 +1,45 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem; /* Equivalent to gap-5 (5 * 0.25rem) */
+}
+
+.spinnerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.checkmark {
+  position: absolute;
+  padding: 1.25rem; /* Equivalent to p-5 */
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  border-radius: 9999px; /* Equivalent to rounded-full */
+  height: 6rem; /* Equivalent to h-24 (24 * 0.25rem) */
+  width: 6rem; /* Equivalent to w-24 (24 * 0.25rem) */
+  border: 4px solid;
+  border-top-color: rgb(134 239 172); /* Equivalent to border-t-green-300 */
+  border-color: rgb(229 231 235); /* Equivalent to border-gray-200 */
+}
+
+.message {
+  text-align: center;
+  font-size: 1.5rem; /* Equivalent to text-2xl */
+  font-weight: 600; /* Equivalent to font-semibold */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

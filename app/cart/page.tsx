@@ -6,6 +6,7 @@ import styles from './Cart.module.css'; // Import the CSS module
 import { useRouter } from "next/navigation";
 import useProductStore from "@/store/useProductStore";
 import useCartStore from "@/store/useCartStore";
+import OrderSummary from "@/components/OrderSummary/OrderSummary";
 
 const Cart = () => {
     const router = useRouter();
@@ -123,7 +124,7 @@ const Cart = () => {
                         Continue Shopping
                     </button>
                 </div>
-                {/* <OrderSummary /> */}
+                <OrderSummary />
             </div>
         </>
     );
