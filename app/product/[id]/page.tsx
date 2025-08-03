@@ -27,6 +27,10 @@ const Product = () => {
         description: '',
         price: 0,
         category: '',
+        userId: '',
+        offerPrice: 0,
+        date: 0,
+        __v: 0
     });
 
     // Filter out the current product from the 'products' array for featured products
