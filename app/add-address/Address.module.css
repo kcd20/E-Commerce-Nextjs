@@ -39,7 +39,6 @@
 }
 
 .textareaField {
-  composes: inputField; /* Inherit styles from inputField */
   resize: none;
 }
 
