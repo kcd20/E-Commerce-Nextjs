@@ -44,6 +44,15 @@
   height: 1rem;
 }
 
+.sellerButton {
+  font-size: 0.75rem;
+  border: 1px solid #d1d5db;
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  background: none;
+  cursor: pointer;
+}
+
 .accountBtn {
   display: flex;
   align-items: center;
